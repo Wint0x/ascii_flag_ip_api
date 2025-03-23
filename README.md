@@ -11,5 +11,5 @@ g++ main.cpp -o ip_info.out
 ./ip_info.out <IP> # Will display information for the specified ip address
 ```
 
-### Example (Over Tor)  
+### Example (Google DNS)
 ![8.8.4.4](https://github.com/Wint0x/ascii_flag_ip_api/blob/main/example/example.png?raw=true)  
