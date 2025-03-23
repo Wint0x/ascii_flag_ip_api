@@ -97,9 +97,14 @@ void json_formatter(json& obj)
 		cout << "[" << key << "] - " << (value == "" ? "Null" : value) << '\n'; // `dump()` returns a JSON-formatted string
 }
 
-int main(void)
+int main(int argc, const char **argv)
 {
-	const string ip_addr = get_ip();
+	string ip_addr{};
+	if (argc == 2)
+		ip_addr = string(argv[1]);
+	else
+		ip_addr = get_ip();
+	
 	json response = get_api_request(ip_addr);
 
 	json_formatter(response);
